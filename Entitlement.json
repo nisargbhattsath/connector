@@ -1,0 +1,26 @@
+{
+  "attributes": [
+    {
+      "name": "mailNickname",
+      "multiValued": false,
+      "description": "The name to display in the address book for the user.",
+      "returned": "always",
+      "required": true
+    },
+    {
+      "name": "externalId",
+      "multiValued": false,
+      "description": "Microsoft group id",
+      "returned": "always",
+      "required": true
+    },
+    {
+      "name": "mailEnabled",
+      "multiValued": false,
+      "description": "The user principal name",
+      "returned": "always",
+      "required": true
+    }
+  ],
+  "filter": ""
+}

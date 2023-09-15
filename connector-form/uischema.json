@@ -1,0 +1,17 @@
+{
+  "clientId": {
+    "ui:emptyValue": "",
+    "ui:enableMarkdownInDescription": true,
+    "ui:description": "Azure Client Id. Take a look at [docs](https://sath.com/docs)."
+  },
+  "tenantId": {
+    "ui:emptyValue": "",
+    "ui:enableMarkdownInDescription": true,
+    "ui:description": "Azure Tenant Id. Take a look at [docs](https://sath.com/docs)."
+  },
+  "clientSecret": {
+    "ui:emptyValue": "",
+    "ui:enableMarkdownInDescription": true,
+    "ui:description": "Azure Client Secret. Take a look at [docs](https://sath.com/docs)."
+  }
+}

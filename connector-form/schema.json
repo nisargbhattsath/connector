@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["clientId", "tenantId", "clientSecret"],
+  "properties": {
+    "clientId": {
+      "type": "string",
+      "title": "Azure Client Id",
+      "description": "Azure Client Id",
+      "minLength": 1
+    },
+    "tenantId": {
+      "type": "string",
+      "title": "Azure Tenant Id",
+      "description": "Azure Tenant Id",
+      "minLength": 1
+    },
+    "clientSecret": {
+      "type": "string",
+      "title": "Azure Client Secret",
+      "description": "Azure Client Secret",
+      "minLength": 1
+    }
+  }
+}

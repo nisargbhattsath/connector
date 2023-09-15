@@ -1,0 +1,185 @@
+{
+  "attributes": [
+    {
+      "name": "city",
+      "description": "The city in which the user is located. Maximum length is 128 characters.",
+      "multiValued": false,
+      "canonicalValues": ["$REGEX ^.{1,128}$"],
+      "idhubFieldName": "officeAddressCity"
+    },
+    {
+      "name": "companyName",
+      "description": "The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.",
+      "multiValued": false,
+      "canonicalValues": ["$REGEX ^.{1,64}$"],
+      "idhubFieldName": "organizationName"
+    },
+    {
+      "name": "country",
+      "description": "The country/region in which the user is located; for example, US or UK. Maximum length is 128 characters.",
+      "multiValued": false,
+      "canonicalValues": ["$REGEX ^.{1,128}$"],
+      "idhubFieldName": "officeAddressCountry"
+    },
+    {
+      "name": "department",
+      "description": "The name for the department in which the user works. Maximum length is 64 characters.",
+      "multiValued": false,
+      "canonicalValues": ["$REGEX ^.{1,64}$"],
+      "idhubFieldName": "department"
+    },
+    {
+      "name": "displayName",
+      "description": "The name displayed in the address book for the user. This is usually the combination of the users first name, middle initial and last name. This property is required when a user is created and it cannot be cleared during updates. Maximum length is 256 characters.",
+      "required": true,
+      "multiValued": false,
+      "canonicalValues": ["$REGEX ^.{1,256}$"],
+      "returned": "always",
+      "idhubFieldName": "displayName"
+    },
+    {
+      "name": "employeeHireDate",
+      "description": "The date and time when the user was hired or will start work in case of a future hire.",
+      "multiValued": false,
+      "type": "dateTime",
+      "mutability": "readOnly"
+    },
+    {
+      "name": "employeeId",
+      "description": "The employee identifier assigned to the user by the organization. The maximum length is 16 characters.",
+      "multiValued": false,
+      "canonicalValues": ["$REGEX ^.{1,16}$"],
+      "caseExact": true,
+      "idhubFieldName": "employeeNumber"
+    },
+    {
+      "name": "employeeType",
+      "description": "Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.",
+      "multiValued": false,
+      "caseExact": true,
+      "canonicalValues": ["Employee", "Contractor", "Consultant", "Vendor"],
+      "idhubFieldName": "employeeType"
+    },
+    {
+      "name": "externalUserState",
+      "description": "For an external user invited to the tenant using the invitation API [https://docs.microsoft.com/en-us/graph/api/invitation-post?view=graph-rest-1.0], this property represents the invited users invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users.",
+      "multiValued": false,
+      "caseExact": true,
+      "canonicalValues": ["PendingAcceptance", "Accepted", "null"],
+      "mutability": "readOnly"
+    },
+    {
+      "name": "entitlements",
+      "description": "Entitlements of the user",
+      "multiValued": true,
+      "caseExact": true
+    },
+    {
+      "name": "faxNumber",
+      "description": "The fax number of the user.",
+      "multiValued": false
+    },
+    {
+      "name": "givenName",
+      "description": "The given name (first name) of the user. Maximum length is 64 characters",
+      "multiValued": false,
+      "caseExact": true,
+      "canonicalValues": ["$REGEX ^.{1,64}$"],
+      "idhubFieldName": "firstName"
+    },
+    {
+      "name": "jobTitle",
+      "description": "The users job title. Maximum length is 128 characters.",
+      "multiValued": false,
+      "canonicalValues": ["$REGEX ^.{1,128}$"],
+      "caseExact": true,
+      "mutability": "readOnly",
+      "idhubFieldName": "jobTitle"
+    },
+    {
+      "name": "mail",
+      "description": "The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com.\\nChanges to this property will also update the users proxyAddresses collection to include the value as an SMTP address. For Azure AD B2C accounts, this property can be updated up to only ten times with unique SMTP addresses. This property cannot contain accent characters.",
+      "multiValued": false,
+      "caseExact": true,
+      "idhubFieldName": "email"
+    },
+    {
+      "name": "mailNickname",
+      "description": "The mail alias for the user. This property must be specified when a user is created. Maximum length is 64 characters.",
+      "multiValued": false,
+      "canonicalValues": ["$REGEX ^.{1,64}$"],
+      "caseExact": true,
+      "idhubFieldName": "login"
+    },
+    {
+      "name": "mobilePhone",
+      "description": "The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters.",
+      "multiValued": false,
+      "canonicalValues": ["$REGEX ^.{1,64}$"],
+      "caseExact": true,
+      "idhubFieldName": "phoneNumber"
+    },
+    {
+      "name": "postalCode",
+      "description": "The postal code for the users postal address. The postal code is specific to the users country/region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters.",
+      "multiValued": false,
+      "canonicalValues": ["$REGEX ^.{1,40}$"],
+      "caseExact": true,
+      "idhubFieldName": "officeAddressPostal"
+    },
+    {
+      "name": "state",
+      "description": "The state or province in the users address. Maximum length is 128 characters.",
+      "multiValued": false,
+      "canonicalValues": ["$REGEX ^.{1,128}$"],
+      "caseExact": true,
+      "idhubFieldName": "officeAddressState"
+    },
+    {
+      "name": "streetAddress",
+      "description": "The street address of the users place of business. Maximum length is 1024 characters.",
+      "multiValued": false,
+      "caseExact": true,
+      "canonicalValues": ["$REGEX ^.{1,1024}$"],
+      "idhubFieldName": "officeAddressLine1"
+    },
+    {
+      "name": "surname",
+      "description": "The users surname (family name or last name). Maximum length is 64 characters.",
+      "multiValued": false,
+      "canonicalValues": ["$REGEX ^.{1,64}$"],
+      "caseExact": true,
+      "idhubFieldName": "lastName"
+    },
+    {
+      "name": "usageLocation",
+      "description": "Usage Location",
+      "multiValued": false,
+      "caseExact": true,
+      "canonicalValues": ["$REGEX ^[a-z]{2}$"],
+      "idhubFieldName": "location"
+    },
+    {
+      "name": "userPrincipalName",
+      "description": "The user principal name (UPN) of the user.",
+      "required": true,
+      "multiValued": false,
+      "returned": "always",
+      "idhubFieldName": "email"
+    },
+    {
+      "name": "managerLogin",
+      "description": "Manager of user.",
+      "caseExact": true,
+      "idhubFieldName": "managerLogin",
+      "mutability": "readOnly"
+    },
+    {
+      "name": "managerDisplayName",
+      "description": "Display name of manager.",
+      "caseExact": true,
+      "idhubFieldName": "managerDisplayName",
+      "mutability": "readOnly"
+    }
+  ]
+}
