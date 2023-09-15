@@ -16,7 +16,7 @@
   },
   "ui:submitButtonOptions": {
     "props": {
-      "style": "text-transform: none;"
+      "className": "no-text-transform"
     },
     "submitText": "Submit"
   }
