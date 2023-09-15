@@ -13,5 +13,11 @@
     "ui:emptyValue": "",
     "ui:enableMarkdownInDescription": true,
     "ui:description": "Azure Client Secret. Take a look at [docs](https://sath.com/docs)."
+  },
+  "ui:submitButtonOptions": {
+    "props": {
+      "style": "text-transform: none;"
+    },
+    "submitText": "Submit"
   }
 }
